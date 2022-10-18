@@ -1,0 +1,155 @@
+@use '../../assets/scss/utils' as *;
+
+.sidebar{
+  width:280px;
+  height:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  overflow:hidden;
+  z-index:40;
+  transition: width 0.2s ease-in;
+  color:map-get($colors, text, base);
+  background-color:map-get($colors, background, base);
+  box-shadow:map-get($shadows, shadow);
+ 
+  @include responsive('medium'){
+    width:300px;
+  }
+  &__top__area{
+    height:90px;
+    background-color: map-get($colors, background, base);
+    padding:0px 0 13px 10px;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    align-content:center;
+
+    @include responsive('medium'){
+      padding:0 0 13px 40px;
+    }
+    &__logo{
+      display:flex;
+      align-items:center;
+      align-content:flex-end;
+      position:sticky;
+
+      img:nth-child(1){
+        width:40px;
+        height:40px;
+        display:flex;
+        align-items:flex-end;
+        justify-content: flex-end;
+      }
+
+      img:nth-child(2){
+        display:block;
+      }
+
+    }
+
+    &__toggle__menu__btn  i{
+      height:40px;
+      width:30px;
+      font-size:24px;
+      color:map-get($colors, background, hoverBlue);
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+
+      &:hover, &.active, &:focus{
+        color:map-get($colors, background, darkblue);
+      }
+    }
+
+  }
+
+  &__menu{
+    overflow-x:hidden;
+    height:80vh;
+    display:flex;
+    flex-direction:column;
+    padding:15px 0;
+    transition: width 0.1s ease-in;
+    background-color: map-get($colors, background, base);
+    box-shadow:map-get($colors, shadow, boxShadow);
+   
+    &__item{
+      display:flex;
+      margin:15px 10px;
+      transition: color 0.3s ease 0s;
+      border-bottom: 4px solid rgba(0, 0, 0, 0);
+      @include responsive('medium'){
+        margin:15px 20px 15px 40px;
+      }
+      &:hover, &.active{
+        text-decoration:none;
+        color:map-get($colors, text, primary);
+        border-radius:3px;
+        border-bottom:4px solid transparent;
+        border-image-slice:1;
+        border-image-source:linear-gradient(to right, map-get($colors, background, darkblue), map-get($colors, background, light));
+        margin-left:10px;
+        @include responsive('medium'){
+          margin-left:40px;
+        }
+      }
+      &__area{
+        width:100%;
+      
+        &__list{
+          margin-left:0px;
+          display:flex;
+          align-items:center; 
+          width:100%;
+        
+          &__icon{
+            width:40px;
+            height:40px;
+            font-size:1.1rem; /* 17.6px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left:0px;
+
+            @include responsive('xsmall'){
+              font-size:1.2rem; /* 19.2px */
+            }
+
+            @include responsive('small'){
+              font-size:1.4rem; /* 22.4px */
+            }
+            
+          }
+          &__text{
+            font-weight:600;
+          }
+        
+      
+
+        }
+      }
+
+    }
+
+    &::-webkit-scrollbar{
+      width:6px;
+    }
+
+    &::-webkit-scrollbar-track{
+      box-shadow:inset 0 0 5px map-get($colors, icon, light);
+      border-radius:8px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background:map-get($colors, background, hoverBlue);
+      border-radius:20px;
+    }
+    &::-webkit-scrollbar-thumb:hover{
+      background:map-get($colors, background, darkblue);
+      height:-2px;
+    }
+  }
+
+}
+

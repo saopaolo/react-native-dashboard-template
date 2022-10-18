@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body {
+  overflow-x: hidden;
+}
+
+.main__content {
+  border: 1px solid fuchsia;
+  background-color: transparent;
+  left: 310px;
+  top: 110px;
+  right: 50px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  z-index: -999;
+  width: calc(100% - 320px);
+  overflow-x: hidden;
+}
+
+.sidebar.inactive ~ .main__content {
+  left: 120px;
+  position: absolute;
+  width: calc(100% - 130px);
+}
+
+.sidebar.inactive ~ .topnav {
+  left: 120px;
+  right: 10px;
+  width: calc(100% - 130px);
+}

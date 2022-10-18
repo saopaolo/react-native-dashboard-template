@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+.dashboard {
+  background-color: none;
+  position: relative;
+  margin-top: 110px;
+  width: calc(100% - 300px);
+}
+
+.sidebar.inactive .dashboard {
+  width: calc(100% - 80px);
+}
+
+.pageHeader {
+  font-size: 2.63rem; /*2.625rem = 42px */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+  color: var(--textColor4);
+  margin-bottom: 30px;
+}
+
+.card {
+  padding: 20px 10px;
+  margin-bottom: 30px;
+  -webkit-border-radius: var(--borderRadius2);
+  -moz-border-radius: var(--borderRadius2);
+  -ms-border-radius: var(--borderRadius2);
+  -o-border-radius: var(--borderRadius2);
+  border-radius: var(--borderRadius2);
+  background-color: var(--background3);
+  border: 1px solid var(--iconColor2);
+}
+
+.fullHeight {
+  height: 100%;
+}
+
+.card.fullHeight {
+  height: calc(100% - 30px);
+}
+
+.cardHeader {
+  color: var(--textColor4);
+  text-transform: capitalize;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--iconColor2);
+}
+
+.cardHeader ~ .cardBody {
+  margin-top: 20px;
+  padding-left: 10px;
+}
+
+.cardFooter {
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 20px;
+  border-top: 1px solid var(--iconColor2);
+  color: var(--textColor3);
+  font-weight: 600;
+}

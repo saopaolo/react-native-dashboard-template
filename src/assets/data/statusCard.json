@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Total Earnings",
+    "count": "$39K",
+    "icon": "bx bx-dollar-circle"
+  },
+  {
+    "title": "Products Sold",
+    "icon": "bx bx-purchase-tag",
+    "count": "2453"
+  },
+  {
+    "title": "New Customers",
+    "icon": "bx bx-user-pin",
+    "count": "1232"
+  },
+  {
+    "icon": "bx bx-receipt",
+    "count": "1,711",
+    "title": "Total orders"
+  }
+]

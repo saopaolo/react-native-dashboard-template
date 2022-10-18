@@ -1,0 +1,226 @@
+@charset "utf-8";
+
+.sidebar {
+  width: var(--sidebarWidth);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: var(--textColor);
+  overflow-y: hidden;
+  -webkit-transition: width 0.2s ease-in;
+  -moz-transition: width 0.2s ease-in;
+  -ms-transition: width 0.2s ease-in;
+  -o-transition: width 0.2s ease-in;
+  transition: width 0.2s ease-in;
+  overflow-x: hidden;
+  z-index: 10;
+}
+
+.sidebar.inactive {
+  width: 100px;
+  min-width: 100px;
+  height: 100%;
+}
+
+/* sidebar top area */
+
+.sidebar .top__area {
+  width: var(--sidebarWidth);
+  background-color: var(--background);
+  z-index: 999;
+  height: 110px;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  padding: 0 0px 0 40px;
+  justify-content: space-between;
+}
+
+.sidebar.inactive .top__area {
+  width: 100px;
+  padding: 0 0px 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: sticky;
+}
+
+.logo img:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img:nth-child(2) {
+  margin-left: 6px;
+}
+
+.sidebar.inactive .logo img:nth-child(2) {
+  display: none;
+}
+
+.sidebar .toggle__menu__btn i {
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--background4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle__menu__btn i:hover {
+  color: var(--background2);
+}
+
+.sidebar.inactive .toggle__menu__btn i {
+  font-size: 22px;
+}
+
+/* sidebar top area */
+
+.sidebar__menu {
+  height: 80vh;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  transition: width 0.1s ease-in;
+  overflow-x: hidden;
+  background-color: var(--background);
+  -webkit-box-shadow: var(--boxShadow);
+  -moz-box-shadow: var(--boxShadow);
+  -ms-box-shadow: var(--boxShadow);
+  -o-box-shadow: var(--boxShadow);
+  box-shadow: var(--boxShadow);
+}
+
+.sidebar__menu__item,
+.sidebar__menu__item:hover,
+.sidebar__menu__item.active {
+  text-decoration: none;
+}
+
+.sidebar__menu__item {
+  display: flex;
+}
+
+.sidebar__menu__item > .sidebar__menu__item__area {
+  padding: 0 40px 0 40px;
+  margin: 15px -20px 15px 0px;
+  width: 100%;
+}
+
+.sidebar__menu__item
+  > .sidebar__menu__item__area
+  .sidebar__menu__item__area__list {
+  display: flex;
+  flex-direction: row;
+  -webkit-transition: color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s;
+  -ms-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+
+.sidebar.inactive .sidebar__menu__item .sidebar__menu__item__area {
+  padding: 0 20px 0 20px;
+}
+
+.sidebar__menu__item__icon {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar__menu__item__text {
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.sidebar.inactive .sidebar__menu__item__text {
+  display: none;
+}
+
+.sidebar__menu__item:hover .sidebar__menu__item__area__list,
+.sidebar__menu__item.active .sidebar__menu__item__area__list {
+  border-radius: 2px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-image-slice: 1;
+  border-image-source: -webkit-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -moz-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -ms-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -o-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  color: var(--textColor3);
+}
+
+/* only scrollbar */
+
+/* width */
+.sidebar__menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.sidebar__menu::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--iconColor);
+  border-radius: 0px;
+}
+
+/* Handle */
+.sidebar__menu::-webkit-scrollbar-thumb {
+  background: var(--background4);
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+.sidebar__menu::-webkit-scrollbar-thumb:hover {
+  background: var(--background2);
+  height: -2px;
+}
+
+/*only scrollbar */
+
+.sidebar__menu__item.inactive
+  .sidebar__menu__item__area
+  .sidebar__menu__item__tooltip {
+  position: relative;
+  z-index: 9999;
+  border: 1px solid green;
+  display: inline-flex;
+  flex-direction: row;
+  left: 80px;
+}

@@ -1,0 +1,156 @@
+.statusCard {
+  padding: 30px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: var(--background3);
+  -webkit-transition: color 0.5s ease 0s;
+  -moz-transition: color 0.5s ease 0s;
+  -ms-transition: color 0.5s ease 0s;
+  -o-transition: color 0.5s ease 0s;
+  transition: color 0.5s ease 0s;
+  margin-bottom: 30px;
+  color: var(--textColor4);
+  border: 1px solid var(--iconColor2);
+  -webkit-box-shadow: var(--boxShadow2);
+  -moz-box-shadow: var(--boxShadow2);
+  -ms-box-shadow: var(--boxShadow2);
+  -o-box-shadow: var(--boxShadow2);
+  box-shadow: var(--boxShadow2);
+  -webkit-border-radius: var(--borderRadius2);
+  -moz-border-radius: var(--borderRadius2);
+  -ms-border-radius: var(--borderRadius2);
+  -o-border-radius: var(--borderRadius2);
+  border-radius: var(--borderRadius2);
+}
+
+.statusCardTitle {
+  -webkit-align-items: space-between;
+  -moz-align-items: space-between;
+  -ms-align-items: space-between;
+  -o-align-items: space-between;
+  align-items: space-between;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+.statusCardInfo {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+.statusCardCount {
+  font-size: 1.5rem;
+  width: 70%;
+  z-index: 1;
+}
+
+.statusCardIcon {
+  width: 30%;
+  height: 100%;
+  font-size: 2rem;
+  -webkit-align-items: right;
+  -moz-align-items: right;
+  -ms-align-items: right;
+  -o-align-items: right;
+  align-items: right;
+  -webkit-justify-items: flex-end;
+  -moz-justify-items: flex-end;
+  -ms-justify-items: flex-end;
+  -o-justify-items: flex-end;
+  justify-items: flex-end;
+  z-index: 1;
+}
+
+.statusCard:before {
+  content: "";
+  width: 100%;
+  padding-top: 100%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-image: -webkit-linear-gradient(
+    to top right,
+    var(--background2),
+    var(--background4)
+  );
+  background-image: -moz-linear-gradient(
+    to top right,
+    var(--background2),
+    var(--background4)
+  );
+  background-image: -ms-linear-gradient(
+    to top right,
+    var(--background2),
+    var(--background4)
+  );
+  background-image: -o-linear-gradient(
+    to top right,
+    var(--background2),
+    var(--background4)
+  );
+  background-image: linear-gradient(
+    to top right,
+    var(--background2),
+    var(--background4)
+  );
+  position: absolute;
+  left: -50%;
+  top: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: transform 0.8s ease 0s;
+  -moz-transition: transform 0.8s ease 0s;
+  -ms-transition: transform 0.8s ease 0s;
+  -o-transition: transform 0.8s ease 0s;
+  transition: transform 0.8s ease 0s;
+}
+
+.statusCard:hover {
+  color: var(--textColor2);
+  -webkit-box-shadow: 2px -4px 0 var(--background4);
+  -moz-box-shadow: 2px -4px 0 var(--background4);
+  -ms-box-shadow: 2px -4px 0 var(--background4);
+  -o-box-shadow: 2px -4px 0 var(--background4);
+  box-shadow: 2px -4px 0 var(--background4);
+}
+
+.statusCard:hover::before {
+  -webkit-transform: scale(3);
+  -moz-transform: scale(3);
+  -ms-transform: scale(3);
+  -o-transform: scale(3);
+  transform: scale(3);
+}

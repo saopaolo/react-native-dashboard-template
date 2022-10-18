@@ -1,0 +1,51 @@
+@use "../../assets/scss/utils" as *;
+
+.ForwardRef-root-1 {
+  height:24px !important;
+}
+
+.MuiPaper-elevation1{
+  box-shadow:none !important;
+  border-bottom:2px solid map-get($colors, background, darkBlue) !important;
+  border-radius:2px !important;
+  padding:3px 0px;
+  &:hover{
+    border-radius:2px !important;
+  border-bottom:2px solid transparent !important;
+    border-image-slice:1 !important;
+    border-image-source:linear-gradient(to right, map-get($colors, background darkBlue), map-get($colors, background, light));
+  
+  }
+  &:focus{
+    &:after{
+      border-radius:2px !important;
+    border-bottom:2px solid transparent !important;
+      border-image-slice:1 !important;
+      border-image-source:linear-gradient(to right, map-get($colors, background darkBlue), map-get($colors, background, light)) !important;
+    
+    }
+  }
+ 
+}
+
+.MuiPaper-rounded{
+  border-radius:none !important;
+}
+
+.search{
+  display:flex;
+  
+  input{
+    width:100%;
+    height:auto;
+    padding:0;
+    margin:0;
+    box-shadow:none !important;
+    background-color: transparent !important;
+    border:none !important;
+    border-bottom:2px solid map-get($colors, background, darkBlue) !important;
+  border-radius:2px !important;
+ 
+  }
+ 
+}

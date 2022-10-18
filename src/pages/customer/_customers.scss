@@ -1,0 +1,95 @@
+@use '../../assets/scss/utils' as *;
+
+.customer{
+  border:1px solid blue;
+  overflow-x:hidden;
+  &__header h3{
+    font-size: 2.00rem; /*2.625rem = 42px */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    font-weight: bold;
+    color: map-get($colors, text, head);
+  
+      margin:30px 0 30px 20px;
+      @include responsive('large'){
+        margin:20px 0 30px 40px;
+        font-size: 2.63rem; /*2.625rem = 42px */
+      }
+}
+  &__search{
+    margin:0px 30px 20px 20px;
+    //border:1px solid fuchsia;
+  }
+
+
+
+  &__form{
+    border:1px solid purple;
+    margin:30px;
+    display:flex;
+    justify-content:flex-end;
+
+    &__button{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:none;
+      outline:none;
+      background-color:transparent;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      i{
+        color:map-get($colors, text, base);
+        font-size:2rem;
+        &:hover, &.active, &:focus{
+          color:map-get($colors, text, primary);
+        }
+      }
+      &:hover, &:focus, &.active{
+        background-color: transparent;
+        
+        border:none;
+        outline:none;
+      }
+    }
+    &__modal{
+      border:1px solid black;
+      position:absolute;
+      top:100px;
+      padding:20px;
+
+      &__close{
+        font-size:1rem;
+        font-weight:bold;
+        color:map-get($colors, text, base);
+        text-align:center;
+        vertical-align:middle;
+        padding:0;
+        margin:0 0  20px 0;
+        right:20px;
+        top:20px;
+        position:absolute;
+        border:none;
+        outline:none;
+        background-color:transparent;
+
+        &:hover, &.active, &:focus{
+          outline:none !important;
+          border:none !important;
+          background-color:transparent;
+        }
+      }
+
+      h2{
+        display:flex;
+        flex-direction:column;
+        margin:40px 0 0 0;
+        padding:20px 0 20px 30px;
+      }
+
+    
+     
+    }
+  }
+}

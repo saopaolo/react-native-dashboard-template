@@ -1,0 +1,37 @@
+@use '../../assets/scss/utils' as *;
+
+.add__form{
+  padding:20px;
+
+  input{
+    border:1px solid map-get($colors, icon, light);
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin-bottom:10px;
+    padding:10px;
+    border-radius: map-get($radius, radius2);
+
+  }
+
+  button{
+    width:100%;
+    height:auto;
+    padding:10px;
+    margin-top:20px;
+    font-size:1.2rem;
+    font-weight:bold;
+    color:map-get($colors, text, primary);
+    background-color:map-get($colors, text, light);
+    border-radius:map-get($radius, radius2);
+    outline:none;
+    border:3px solid map-get($colors, text, primary);
+
+    &:hover, &.active, &:focus{
+      border:3px solid transparent;
+      outline:none;
+      color:map-get($colors, text, light);
+      background-color:map-get($colors, background, darkBlue);
+    }
+  }
+}

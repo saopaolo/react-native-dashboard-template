@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "bx bx-calendar",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  },
+  {
+    "icon": "bx bx-user-pin",
+    "content": "Nullam a sapien vitae ex ultrices tincidunt."
+  },
+  {
+    "icon": "bx bx-purchase-tag-alt",
+    "content": "Donec maximus leo non lorem dapibus consequat."
+  },
+  {
+    "icon": "bx bx-receipt",
+    "content": "Maecenas vitae nulla at massa sagittis dignissim vitae sit amet erat."
+  }
+]

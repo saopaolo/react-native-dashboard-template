@@ -1,0 +1,22 @@
+@use "../../assets/scss/utils" as *;
+
+.badge{
+  padding:6px 10px;
+  color:map-get($colors, text, light);
+  border-radius:4px;
+}
+
+.badge-danger{
+  background-color: map-get($colors, badge, danger);
+}
+
+.badge-success{
+  background-color: map-get($colors, badge, success);
+}
+
+.badge-primary{
+  background-color: map-get($colors, badge, primary);
+}
+.badge-warning{
+  background-color: map-get($colors, badge, warning);
+}

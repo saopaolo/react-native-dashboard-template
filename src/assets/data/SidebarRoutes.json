@@ -1,0 +1,42 @@
+[
+  {
+    "displayName": "Dashboard",
+    "route": "/",
+    "icon": "bx bxs-bar-chart-alt-2"
+  },
+  {
+    "displayName": "Customers",
+    "route": "/customers",
+    "icon": "bx bx-user-pin"
+  },
+  {
+    "displayName": "Products",
+    "route": "/products",
+    "icon": "bx bx-purchase-tag-alt"
+  },
+  {
+    "displayName": "Invoices",
+    "route": "/invoices",
+    "icon": "bx bx-receipt"
+  },
+  {
+    "displayName": "Calendar",
+    "route": "/calendar",
+    "icon": "bx bx-calendar"
+  },
+  {
+    "displayName": "Chat",
+    "route": "/chat",
+    "icon": "bx bx-chat"
+  },
+  {
+    "displayName": "Help Center",
+    "route": "/helpcenter",
+    "icon": "bx bx-help-circle"
+  },
+  {
+    "displayName": "settings",
+    "route": "/settings",
+    "icon": "bx bx-cog"
+  }
+]

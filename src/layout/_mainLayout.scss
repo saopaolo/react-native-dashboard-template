@@ -1,0 +1,44 @@
+@use '../assets/scss/utils' as *;
+
+.main{
+  &__content{
+   // border:1px solid fuchsia;
+    position:absolute;
+    z-index:-999;
+    width:calc(100% - 2px);
+    left:1px;
+    top:90px;
+    right:1px;
+    height:100vh;
+    overflow-y: auto;
+    overflow-x:hidden;
+    
+
+    @include responsive('xsmall'){
+      //border:1px solid green;
+      width:calc(100% - 281px);
+      left:280px;
+      right:1px;
+    }
+    @include responsive('medium'){
+     // border:1px solid purple;
+      width:calc(100% - 301px);
+      left:300px;
+      right:1px;
+    }
+  }
+
+  .sidebar.inactive ~ &__content{
+    position:absolute;
+    left:80px;
+    right:0px;
+    width:calc(100% - 80px);
+
+    @include responsive('medium'){
+      //border:1px solid blue;
+      width:calc(100% - 141px);
+      left:140px;
+      right:1px;
+    }
+  }
+}

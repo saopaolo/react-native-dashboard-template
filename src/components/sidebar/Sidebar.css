@@ -1,0 +1,129 @@
+.sidebar {
+  min-width: var(--sidebarWidth);
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--background);
+  -webkit-box-shadow: var(--boxShadow);
+  -moz-box-shadow: var(--boxShadow);
+  -ms-box-shadow: var(--boxShadow);
+  -o-box-shadow: var(--boxShadow);
+  box-shadow: var(--boxShadow);
+  color: var(--textColor);
+}
+
+.logoArea {
+  height: 140px;
+  /*border: 1px solid purple; */
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+
+.sidebarLogo {
+  /* border: 1px solid green; */
+  height: 110px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+}
+
+.sidebarLogo > img {
+  height: 29px;
+  width: 216.5px;
+}
+
+.sidebarItem {
+  padding: 0 40px;
+}
+
+.SidebarItemInner {
+  padding: 15px 25px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  font-weight: 600;
+  -webkit-transition: color 0.3s ease 0s;
+  -moz-transition: color 0.3s ease 0s;
+  -ms-transition: color 0.3s ease 0s;
+  -o-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.SidebarItemInner > i {
+  margin-right: 10px;
+  font-size: 1.5rem;
+}
+
+.SidebarItemInner > span {
+  text-transform: capitalize;
+}
+
+/*important */
+.SidebarItemInner {
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+
+.SidebarItemInner:hover,
+.SidebarItemInner.active {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  border-bottom: 4px solid transparent;
+  border-image-slice: 1;
+  border-image-source: -webkit-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -moz-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -ms-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: -o-linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  border-image-source: linear-gradient(
+    to right,
+    var(--background2),
+    var(--background3)
+  );
+  color: var(--textColor3);
+}
